@@ -1,0 +1,86 @@
+:root {
+  /* Brand colors */
+  --dourbia-orange: #fa7921;
+  --dourbia-orange-hover: #e86d18;
+  --dourbia-orange-dark: #e56512;
+  --dourbia-cyan: #5ce1e6;
+  --dourbia-cyan-deep: #3ec9d0;
+  --dourbia-cyan-soft: #9cecef;
+  --dourbia-cyan-bg: #b8ebf2;
+  --dourbia-cyan-bg-soft: #d4f3f8;
+  --dourbia-nav: #2f2f2f;
+  --dourbia-navy: #1a1a2e;
+  --dourbia-text: #242424;
+  --dourbia-text-muted: #5a6278;
+  --dourbia-bg: #ffffff;
+  --dourbia-surface: #f6fbfc;
+  --dourbia-white: #ffffff;
+  --dourbia-border: #d8eef1;
+  --dourbia-border-strong: #b8e4ea;
+  --dourbia-shadow: 0 8px 24px rgba(30, 60, 80, 0.12);
+
+  /* Semantic aliases */
+  --color-primary: var(--dourbia-orange);
+  --color-secondary: var(--dourbia-cyan);
+  --color-dark: var(--dourbia-nav);
+  --color-background: var(--dourbia-cyan-bg);
+  --color-surface: var(--dourbia-white);
+  --color-text-primary: var(--dourbia-text);
+  --color-text-secondary: var(--dourbia-text-muted);
+  --color-border: var(--dourbia-border);
+  --color-border-strong: var(--dourbia-border-strong);
+  --color-primary-soft: rgba(250, 121, 33, 0.1);
+  --color-primary-border: rgba(250, 121, 33, 0.45);
+
+  /* Spacing scale */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+
+  /* Layout */
+  --page-max-width: 1280px;
+  --space-section: 2rem;
+  --control-height: 46px;
+  --nav-height: 3.25rem;
+  --scrollbar-thumb: rgba(90, 98, 120, 0.32);
+
+  /* Radius & shadows */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 2px 8px rgba(30, 60, 80, 0.08);
+  --shadow-md: var(--dourbia-shadow);
+
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  color: var(--color-text-primary);
+  background: var(--dourbia-bg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+:focus-visible {
+  outline: 2px solid var(--dourbia-orange);
+  outline-offset: 2px;
+}

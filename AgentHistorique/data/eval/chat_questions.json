@@ -1,0 +1,695 @@
+{
+  "version": 1,
+  "description": "End-to-end chat evaluation dataset for Sprint 4 (40 cases).",
+  "cases": [
+    {
+      "id": "C01",
+      "category": "monument_facts",
+      "session_id": "eval_c01",
+      "language": "fr",
+      "turns": [
+        {
+          "message": "Explique-moi les Thermes d'Antonin.",
+          "checks": {
+            "expect_sources": true,
+            "source_titles_any": ["Thermes d'Antonin", "Parc des thermes d'Antonin"],
+            "expect_refusal": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "C02",
+      "category": "monument_facts",
+      "session_id": "eval_c02",
+      "language": "fr",
+      "turns": [
+        {
+          "message": "Où se trouve le théâtre romain de Carthage ?",
+          "checks": {
+            "expect_sources": true,
+            "source_titles_any": ["Theatre"],
+            "expect_refusal": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "C03",
+      "category": "monument_facts",
+      "session_id": "eval_c03",
+      "language": "fr",
+      "turns": [
+        {
+          "message": "Qu'est-ce que le Tophet de Carthage ?",
+          "checks": {
+            "expect_sources": true,
+            "source_titles_any": ["Tophet"],
+            "expect_refusal": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "C04",
+      "category": "monument_facts",
+      "session_id": "eval_c04",
+      "language": "fr",
+      "turns": [
+        {
+          "message": "Où se trouve la colline de Byrsa ?",
+          "checks": {
+            "expect_sources": true,
+            "source_titles_any": ["Colline de Byrsa"],
+            "expect_refusal": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "C05",
+      "category": "monument_facts",
+      "session_id": "eval_c05",
+      "language": "fr",
+      "turns": [
+        {
+          "message": "Parle-moi des ports puniques.",
+          "checks": {
+            "expect_sources": true,
+            "source_titles_any": ["Ports puniques"],
+            "expect_refusal": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "C06",
+      "category": "monument_facts",
+      "session_id": "eval_c06",
+      "language": "fr",
+      "turns": [
+        {
+          "message": "Qu'est-ce que le quartier Magon ?",
+          "checks": {
+            "expect_sources": true,
+            "source_titles_any": ["Quartier Magon"],
+            "expect_refusal": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "C07",
+      "category": "monument_facts",
+      "session_id": "eval_c07",
+      "language": "fr",
+      "turns": [
+        {
+          "message": "Où se trouve la basilique Saint Cyprien ?",
+          "checks": {
+            "expect_sources": true,
+            "source_titles_any": ["Basilique Saint Cyprien"],
+            "expect_refusal": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "C08",
+      "category": "monument_facts",
+      "session_id": "eval_c08",
+      "language": "fr",
+      "turns": [
+        {
+          "message": "Je veux voir un amphithéâtre romain.",
+          "checks": {
+            "expect_sources": true,
+            "source_titles_any": ["Amphitheatre De Carthage"],
+            "expect_refusal": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "C09",
+      "category": "monument_facts",
+      "session_id": "eval_c09",
+      "language": "fr",
+      "turns": [
+        {
+          "message": "Explique l'histoire du théâtre romain de Carthage.",
+          "checks": {
+            "expect_sources": true,
+            "source_titles_any": ["Theatre"],
+            "expect_refusal": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "C10",
+      "category": "monument_facts",
+      "session_id": "eval_c10",
+      "language": "fr",
+      "turns": [
+        {
+          "message": "Quelle est l'importance historique du Tophet ?",
+          "checks": {
+            "expect_sources": true,
+            "source_titles_any": ["Tophet"],
+            "expect_refusal": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "C11",
+      "category": "monument_facts",
+      "session_id": "eval_c11",
+      "language": "fr",
+      "turns": [
+        {
+          "message": "Raconte-moi l'histoire de la colline de Byrsa.",
+          "checks": {
+            "expect_sources": true,
+            "source_titles_any": ["Colline de Byrsa"],
+            "expect_refusal": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "C12",
+      "category": "monument_facts",
+      "session_id": "eval_c12",
+      "language": "fr",
+      "turns": [
+        {
+          "message": "Décris le parc des thermes d'Antonin et son contexte historique.",
+          "checks": {
+            "expect_sources": true,
+            "source_titles_any": ["Parc des thermes d'Antonin", "Thermes d'Antonin"],
+            "expect_refusal": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "C13",
+      "category": "circuits",
+      "session_id": "eval_c13",
+      "language": "fr",
+      "turns": [
+        {
+          "message": "Propose un circuit romain à Carthage.",
+          "checks": {
+            "expect_sources": true,
+            "source_titles_any": ["Circuit Romain"],
+            "expect_source_type": "circuit",
+            "expect_refusal": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "C14",
+      "category": "circuits",
+      "session_id": "eval_c14",
+      "language": "fr",
+      "turns": [
+        {
+          "message": "Je cherche un circuit sur l'époque punique.",
+          "checks": {
+            "expect_sources": true,
+            "source_titles_any": ["Circuit Punique"],
+            "expect_source_type": "circuit",
+            "expect_refusal": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "C15",
+      "category": "circuits",
+      "session_id": "eval_c15",
+      "language": "fr",
+      "turns": [
+        {
+          "message": "Quel circuit byzantin existe à Carthage ?",
+          "checks": {
+            "expect_sources": true,
+            "source_titles_any": ["Circuit Byzantin"],
+            "expect_source_type": "circuit",
+            "expect_refusal": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "C16",
+      "category": "circuits",
+      "session_id": "eval_c16",
+      "language": "fr",
+      "turns": [
+        {
+          "message": "J'ai peu de temps, quel circuit demi-journée faire ?",
+          "checks": {
+            "expect_sources": true,
+            "source_titles_any": ["Circuit Demi-Journée"],
+            "expect_source_type": "circuit",
+            "expect_refusal": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "C17",
+      "category": "circuits",
+      "session_id": "eval_c17",
+      "language": "fr",
+      "turns": [
+        {
+          "message": "Existe-t-il un circuit à La Marsa ?",
+          "checks": {
+            "expect_sources": true,
+            "source_titles_any": ["Circuit La Marsa"],
+            "expect_source_type": "circuit",
+            "expect_refusal": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "C18",
+      "category": "practical_info",
+      "session_id": "eval_c18",
+      "language": "fr",
+      "turns": [
+        {
+          "message": "Combien de temps faut-il pour visiter les Thermes d'Antonin ?",
+          "checks": {
+            "expect_sources": true,
+            "source_titles_any": ["Thermes d'Antonin", "Parc des thermes d'Antonin"],
+            "expect_refusal": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "C19",
+      "category": "practical_info",
+      "session_id": "eval_c19",
+      "language": "fr",
+      "turns": [
+        {
+          "message": "Le théâtre est-il accessible aux visiteurs ?",
+          "checks": {
+            "expect_sources": true,
+            "source_titles_any": ["Theatre"],
+            "expect_refusal": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "C20",
+      "category": "practical_info",
+      "session_id": "eval_c20",
+      "language": "fr",
+      "turns": [
+        {
+          "message": "Quels monuments ont une accessibilité réduite ?",
+          "checks": {
+            "expect_sources": true,
+            "expect_refusal": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "C21",
+      "category": "practical_info",
+      "session_id": "eval_c21",
+      "language": "fr",
+      "turns": [
+        {
+          "message": "Quels monuments se visitent en moins de 15 minutes ?",
+          "checks": {
+            "expect_sources": true,
+            "expect_refusal": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "C22",
+      "category": "practical_info",
+      "session_id": "eval_c22",
+      "language": "fr",
+      "turns": [
+        {
+          "message": "Quels sites puniques sont difficiles d'accès ?",
+          "checks": {
+            "expect_sources": true,
+            "expect_refusal": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "C23",
+      "category": "robustness",
+      "session_id": "eval_c23",
+      "language": "fr",
+      "turns": [
+        {
+          "message": "Quel temps fait-il demain à Carthage ?",
+          "checks": {
+            "expect_refusal": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "C24",
+      "category": "robustness",
+      "session_id": "eval_c24",
+      "language": "fr",
+      "turns": [
+        {
+          "message": "Peux-tu réserver un billet pour les thermes ?",
+          "checks": {
+            "expect_refusal": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "C25",
+      "category": "robustness",
+      "session_id": "eval_c25",
+      "language": "fr",
+      "turns": [
+        {
+          "message": "Qui a gagné la Coupe du monde en 2022 ?",
+          "checks": {
+            "expect_refusal": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "C26",
+      "category": "robustness",
+      "session_id": "eval_c26",
+      "language": "fr",
+      "turns": [
+        {
+          "message": "Quel est le meilleur restaurant à Tokyo ?",
+          "checks": {
+            "expect_refusal": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "C27",
+      "category": "robustness",
+      "session_id": "eval_c27",
+      "language": "fr",
+      "turns": [
+        {
+          "message": "Donne-moi les horaires exacts du Colisée de Rome.",
+          "checks": {
+            "expect_refusal": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "C28",
+      "category": "memory_single",
+      "session_id": "eval_c28",
+      "language": "fr",
+      "turns": [
+        {
+          "message": "Je suis intéressé par l'architecture romaine.",
+          "checks": {
+            "expect_sources": true,
+            "memory_interests_any": ["romain", "architecture"],
+            "expect_refusal": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "C29",
+      "category": "memory_single",
+      "session_id": "eval_c29",
+      "language": "fr",
+      "turns": [
+        {
+          "message": "J'ai 1h30 pour visiter Carthage.",
+          "checks": {
+            "memory_time_minutes": 90,
+            "expect_refusal": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "C30",
+      "category": "memory_single",
+      "session_id": "eval_c30",
+      "language": "fr",
+      "turns": [
+        {
+          "message": "Je préfère visiter à pied.",
+          "checks": {
+            "memory_mobility_mode": "walking",
+            "expect_refusal": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "C31",
+      "category": "memory_single",
+      "session_id": "eval_c31",
+      "language": "fr",
+      "turns": [
+        {
+          "message": "Je suis passionné par l'époque punique.",
+          "checks": {
+            "expect_sources": true,
+            "memory_interests_any": ["punique"],
+            "expect_refusal": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "C32",
+      "category": "memory_single",
+      "session_id": "eval_c32",
+      "language": "fr",
+      "turns": [
+        {
+          "message": "J'ai 2 heures pour visiter.",
+          "checks": {
+            "memory_time_minutes": 120,
+            "expect_refusal": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "M01",
+      "category": "memory_multi_turn",
+      "session_id": "eval_m01",
+      "language": "fr",
+      "turns": [
+        {
+          "message": "Parle-moi du théâtre romain de Carthage.",
+          "checks": {
+            "expect_sources": true,
+            "source_titles_any": ["Theatre"],
+            "memory_monuments_any": ["Theatre"],
+            "expect_refusal": false
+          }
+        },
+        {
+          "message": "Et quels sont les horaires ?",
+          "checks": {
+            "expect_sources": true,
+            "source_titles_any": ["Theatre"],
+            "memory_monuments_any": ["Theatre"],
+            "expect_refusal": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "M02",
+      "category": "memory_multi_turn",
+      "session_id": "eval_m02",
+      "language": "fr",
+      "turns": [
+        {
+          "message": "Explique-moi les Thermes d'Antonin.",
+          "checks": {
+            "expect_sources": true,
+            "source_titles_any": ["Thermes d'Antonin", "Parc des thermes d'Antonin"],
+            "expect_refusal": false
+          }
+        },
+        {
+          "message": "Et son accessibilité ?",
+          "checks": {
+            "expect_sources": true,
+            "expect_refusal": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "M03",
+      "category": "memory_multi_turn",
+      "session_id": "eval_m03",
+      "language": "fr",
+      "turns": [
+        {
+          "message": "Je suis intéressé par l'époque romaine.",
+          "checks": {
+            "memory_interests_any": ["romain", "romaine"],
+            "expect_refusal": false
+          }
+        },
+        {
+          "message": "Quels monuments me conseilles-tu ?",
+          "checks": {
+            "expect_sources": true,
+            "expect_refusal": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "M04",
+      "category": "memory_multi_turn",
+      "session_id": "eval_m04",
+      "language": "fr",
+      "turns": [
+        {
+          "message": "J'ai 1h30 pour visiter Carthage.",
+          "checks": {
+            "memory_time_minutes": 90,
+            "expect_refusal": false
+          }
+        },
+        {
+          "message": "Propose-moi un parcours.",
+          "checks": {
+            "expect_sources": true,
+            "expect_refusal": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "M05",
+      "category": "memory_multi_turn",
+      "session_id": "eval_m05",
+      "language": "fr",
+      "turns": [
+        {
+          "message": "Qu'est-ce que le Tophet de Carthage ?",
+          "checks": {
+            "expect_sources": true,
+            "source_titles_any": ["Tophet"],
+            "memory_monuments_any": ["Tophet"],
+            "expect_refusal": false
+          }
+        },
+        {
+          "message": "Et quelle est sa durée de visite ?",
+          "checks": {
+            "expect_sources": true,
+            "source_titles_any": ["Tophet"],
+            "expect_refusal": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "M06",
+      "category": "memory_multi_turn",
+      "session_id": "eval_m06",
+      "language": "fr",
+      "turns": [
+        {
+          "message": "Où se trouve la colline de Byrsa ?",
+          "checks": {
+            "expect_sources": true,
+            "source_titles_any": ["Colline de Byrsa"],
+            "expect_refusal": false
+          }
+        },
+        {
+          "message": "Combien de temps faut-il pour la visiter ?",
+          "checks": {
+            "expect_sources": true,
+            "source_titles_any": ["Colline de Byrsa"],
+            "expect_refusal": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "M07",
+      "category": "memory_multi_turn",
+      "session_id": "eval_m07",
+      "language": "fr",
+      "turns": [
+        {
+          "message": "Je cherche un circuit sur l'époque punique.",
+          "checks": {
+            "expect_sources": true,
+            "source_titles_any": ["Circuit Punique"],
+            "expect_refusal": false
+          }
+        },
+        {
+          "message": "Quels monuments sont inclus ?",
+          "checks": {
+            "expect_sources": true,
+            "expect_refusal": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "M08",
+      "category": "memory_multi_turn",
+      "session_id": "eval_m08",
+      "language": "fr",
+      "turns": [
+        {
+          "message": "Parle-moi de la basilique Bir Messaouda.",
+          "checks": {
+            "expect_sources": true,
+            "source_titles_any": ["Basilique Bir Messaouda"],
+            "expect_refusal": false
+          }
+        },
+        {
+          "message": "Et les tarifs ?",
+          "checks": {
+            "expect_sources": true,
+            "expect_refusal": false
+          }
+        }
+      ]
+    }
+  ]
+}

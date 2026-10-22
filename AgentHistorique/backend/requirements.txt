@@ -1,0 +1,16 @@
+fastapi
+uvicorn[standard]
+sqlalchemy
+alembic
+psycopg[binary]
+pgvector
+pydantic
+pydantic-settings
+python-dotenv
+pandas
+openpyxl
+sentence-transformers
+httpx
+langchain-core
+duckduckgo-search
+pytest

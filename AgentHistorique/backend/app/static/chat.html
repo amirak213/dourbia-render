@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dourbia — Guide culturel Carthage</title>
+    <style>
+      :root {
+        font-family: "Segoe UI", system-ui, sans-serif;
+        color: #242424;
+        background: #f6fbfc;
+        --dourbia-orange: #fa7921;
+        --dourbia-cyan: #5ce1e6;
+        --dourbia-cyan-deep: #3ec9d0;
+        --dourbia-navy: #1a1a2e;
+        --dourbia-muted: #5a6278;
+        --dourbia-border: #d8eef1;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; }
+      .app {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 1.5rem;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+      h1 { margin: 0 0 0.25rem; font-size: 1.6rem; color: var(--dourbia-navy); }
+      .subtitle { margin: 0 0 1rem; color: var(--dourbia-muted); }
+      label { display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.9rem; color: var(--dourbia-muted); margin-bottom: 1rem; }
+      input, textarea {
+        padding: 0.6rem 0.75rem;
+        border: 1px solid var(--dourbia-border);
+        border-radius: 8px;
+        font: inherit;
+      }
+      .chat { flex: 1; display: flex; flex-direction: column; gap: 1rem; margin-bottom: 1rem; }
+      .placeholder { color: #7a849c; text-align: center; margin-top: 2rem; }
+      .bubble { padding: 1rem; border-radius: 12px; max-width: 95%; }
+      .bubble.user { align-self: flex-end; background: rgba(92, 225, 230, 0.25); color: var(--dourbia-navy); border: 1px solid var(--dourbia-border); }
+      .bubble.assistant { align-self: flex-start; background: #fff; border: 1px solid var(--dourbia-border); }
+      .meta { margin-top: 0.75rem; font-size: 0.85rem; }
+      .meta a { color: var(--dourbia-cyan-deep); word-break: break-all; }
+      .meta pre { background: #f0fafb; padding: 0.5rem; border-radius: 6px; overflow-x: auto; font-size: 0.8rem; }
+      .actions { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.75rem; }
+      .chip { background: rgba(92, 225, 230, 0.2); color: var(--dourbia-navy); padding: 0.2rem 0.55rem; border-radius: 999px; font-size: 0.8rem; border: 1px solid var(--dourbia-border); }
+      .timing { margin-top: 0.5rem; font-size: 0.8rem; color: var(--dourbia-muted); }
+      .error { color: #c2410c; background: #fff4f0; padding: 0.6rem; border-radius: 8px; margin-bottom: 0.5rem; border: 1px solid #fed7aa; }
+      .composer { display: flex; gap: 0.75rem; align-items: flex-end; }
+      .composer textarea { flex: 1; resize: vertical; }
+      button {
+        padding: 0.75rem 1.25rem;
+        background: var(--dourbia-cyan);
+        color: var(--dourbia-navy);
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        font: inherit;
+        font-weight: 600;
+      }
+      button:disabled { opacity: 0.6; cursor: not-allowed; }
+    </style>
+  </head>
+  <body>
+    <div class="app">
+      <h1><span style="color:#3ec9d0">dour</span><span style="color:#fa7921">bia</span> — Guide culturel</h1>
+      <p class="subtitle">Cultural Tourism Platform · démo connectée à <code>/api/chat</code></p>
+
+      <label>
+        Session ID
+        <input id="sessionId" value="demo_session" />
+      </label>
+
+      <main id="chat" class="chat">
+        <p class="placeholder">Posez une question sur les monuments ou circuits de Carthage.</p>
+      </main>
+
+      <p id="error" class="error" hidden></p>
+
+      <form id="form" class="composer">
+        <textarea id="message" rows="2" placeholder="Votre question..."></textarea>
+        <button type="submit" id="sendBtn">Envoyer</button>
+      </form>
+    </div>
+
+    <script>
+      const chatEl = document.getElementById("chat");
+      const formEl = document.getElementById("form");
+      const messageEl = document.getElementById("message");
+      const sessionEl = document.getElementById("sessionId");
+      const errorEl = document.getElementById("error");
+      const sendBtn = document.getElementById("sendBtn");
+      let hasMessages = false;
+
+      function clearPlaceholder() {
+        if (!hasMessages) {
+          chatEl.innerHTML = "";
+          hasMessages = true;
+        }
+      }
+
+      function addBubble(role, html) {
+        clearPlaceholder();
+        const article = document.createElement("article");
+        article.className = `bubble ${role}`;
+        article.innerHTML = html;
+        chatEl.appendChild(article);
+        chatEl.scrollTop = chatEl.scrollHeight;
+      }
+
+      function formatDuration(ms) {
+        if (ms < 1000) return `${Math.round(ms)} ms`;
+        return `${(ms / 1000).toFixed(1)} s`;
+      }
+
+      formEl.addEventListener("submit", async (event) => {
+        event.preventDefault();
+        const message = messageEl.value.trim();
+        if (!message) return;
+
+        errorEl.hidden = true;
+        sendBtn.disabled = true;
+        addBubble("user", `<p>${message.replace(/</g, "&lt;")}</p>`);
+        messageEl.value = "";
+
+        try {
+          const started = performance.now();
+          const response = await fetch("/api/chat", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              session_id: sessionEl.value.trim() || "demo_session",
+              message,
+              language: "auto",
+            }),
+          });
+          const data = await response.json();
+          const clientElapsedMs = performance.now() - started;
+          if (!response.ok) throw new Error(data.detail || "Erreur API");
+
+          const responseTimeMs = data.latency_ms ?? clientElapsedMs;
+          let html = `<p>${data.answer.replace(/</g, "&lt;")}</p>`;
+          if (responseTimeMs != null) {
+            html += `<p class="timing">Répondu en ${formatDuration(responseTimeMs)}`;
+            if (data.latency_ms != null && clientElapsedMs > data.latency_ms + 200) {
+              html += ` (total navigateur ${formatDuration(clientElapsedMs)})`;
+            }
+            html += `</p>`;
+          }
+          if (data.sources?.length) {
+            html += `<div class="meta"><strong>Sources</strong><ul>`;
+            for (const s of data.sources) {
+              const meta =
+                s.source_type === "web"
+                  ? "web"
+                  : `${s.source_type}, score ${Number(s.score ?? 0).toFixed(2)}`;
+              html += `<li>${s.title ?? "Sans titre"} (${meta})`;
+              if (s.source_type === "web" && s.url) {
+                html += ` — <a href="${s.url}" target="_blank" rel="noopener noreferrer">${s.url}</a>`;
+              }
+              html += `</li>`;
+            }
+            html += `</ul></div>`;
+          }
+          if (data.memory_context) {
+            html += `<div class="meta"><strong>Mémoire</strong><pre>${JSON.stringify(data.memory_context, null, 2)}</pre></div>`;
+          }
+          if (data.suggested_actions?.length) {
+            html += `<div class="actions">`;
+            for (const a of data.suggested_actions) {
+              html += `<span class="chip">${a}</span>`;
+            }
+            html += `</div>`;
+          }
+          addBubble("assistant", html);
+        } catch (err) {
+          errorEl.textContent = err.message || "Erreur inconnue";
+          errorEl.hidden = false;
+        } finally {
+          sendBtn.disabled = false;
+        }
+      });
+    </script>
+  </body>
+</html>

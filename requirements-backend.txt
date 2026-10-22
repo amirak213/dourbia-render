@@ -1,0 +1,29 @@
+# Dependances du backend Dourbia (Render / Docker) - genere par scan des imports.
+# Python 3.12. torch est installe a part dans le Dockerfile (build CPU).
+asyncpg==0.31.0
+beautifulsoup4==4.14.3
+ddgs==9.16.0
+deep-translator==1.11.4
+fastapi==0.135.2
+groq==0.37.1
+httpx==0.28.1
+langchain-core==0.3.86
+langdetect==1.0.9
+langfuse==4.5.1
+numpy==2.5.3
+openai==2.54.0
+pandas==3.0.5
+pgvector==0.4.2
+psycopg2-binary==2.9.12
+pydantic==2.13.5
+pydantic-settings==2.15.0
+python-dotenv==1.2.3
+redis==7.4.0
+sentence-transformers==5.5.0
+slowapi==0.1.9
+SQLAlchemy==2.0.52
+uvicorn[standard]==0.41.0
+# Dependances dynamiques (chargees sans import explicite)
+psycopg[binary]==3.3.4
+openpyxl==3.1.5
+python-multipart==0.0.22

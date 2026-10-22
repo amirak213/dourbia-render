@@ -1,0 +1,61 @@
+nom;latitude;longitude;duree_visite_min;popularite;Tarif_resident;Tarif_etudiant;Tarif_etranger;Tarif_enseignant;Tarif_retraite;Tarif_enfant
+Theatre;36.8562934;10.3283601;15;5;9;2;12;4,5;4,5;2
+Parc des villas romaines;36.856562;10.3311362;30;5;9;2;12;4,5;4,5;2
+Monastere de Bigua (maison de Tellus);36.8567048;10.3317312;10;5;9;2;12;4,5;4,5;2
+Maison du Cryptoportique;36.8572582;10.3314416;10;4;9;2;12;4,5;4,5;2
+Maison de la Basilique;36.858002;10.331092;10;2;9;2;12;4,5;4,5;2
+Maison de la Volière;36.8578396;10.3315444;10;4;9;2;12;4,5;4,5;2
+Maison de la Rotonde;36.857695;10.331916;10;3;9;2;12;4,5;4,5;2
+Maison des Lions;36.858167;10.332822;10;2;9;2;12;4,5;4,5;2
+Nécropole punique (Parc des villas romaines);36.857306;10.330476;20;3;9;2;12;4,5;4,5;2
+Nymphée;36.856690;10.331199;5;2;9;2;12;4,5;4,5;2
+Muraille de Théodose;36.859965;10.329867;5;2;9;2;12;4,5;4,5;2
+Parc des thermes d'Antonin;36.8540267;10.3327804;60;5;9;2;12;4,5;4,5;2
+Chapelle d'Asterius;36.8544584;10.3326347;15;3;9;2;12;4,5;4,5;2
+Four punique;36.8547708;10.3319696;10;3;9;2;12;4,5;4,5;2
+Maison de la cachette;36.855082;10.331529;10;3;9;2;12;4,5;4,5;2
+Tombe de la Nécropole punique;36.85495;10.333704;10;3;9;2;12;4,5;4,5;2
+Basiliques byzantines;36.8549085;10.3322136;10;3;9;2;12;4,5;4,5;2
+Scholla;36.8546395;10.3325452;10;3;9;2;12;4,5;4,5;2
+Maison de Dionysos;36.8550718;10.3331254;10;3;9;2;12;4,5;4,5;2
+Nécropole punique (Parc des thermes d'Antonin);36.854895;10.333654;10;3;9;2;12;4,5;4,5;2
+Thermes d'Antonin;36.8545707;10.3345294;60;5;9;2;12;4,5;4,5;2
+Latrines publiques;36.8538945;10.3337152;10;4;9;2;12;4,5;4,5;2
+Quartier Magon;36.8515771;10.3312691;20;5;9;2;12;4,5;4,5;2
+Tophet;36.8414269;10.3227339;20;5;9;2;12;4,5;4,5;2
+Ports puniques;36.843583;10.325554;20;5;9;2;12;4,5;4,5;2
+Port militaire;36.844582;10.325695;15;4;9;2;12;4,5;4,5;2
+Port marchand;36.8430196;10.3253695;15;4;9;2;12;4,5;4,5;2
+Îlot de l'Amirauté;36.844955;10.325577;15;4;9;2;12;4,5;4,5;2
+Temple (emplacement);36.844955;10.325577;10;2;;;;;;
+La colline de Byrsa;36.8532769;10.322704;75;5;9;2;12;4,5;4,5;2
+Bibliothèque Tabularium;36.852843;10.323233;15;3;9;2;12;4,5;4,5;2
+Temple prostyle;36.852542;10.3229356;15;3;9;2;12;4,5;4,5;2
+Grand Temple d'Esculape (Eshmoun);36.852709;10.323858;10;3;9;2;12;4,5;4,5;2
+Emplacement probable de la Basilique judiciaire;36.8528938;10.3249501;10;3;9;2;12;4,5;4,5;2
+Absides Beule en contrebas;36.8528684;10.325161;10;2;9;2;12;4,5;4,5;2
+Tombeaux puniques;36.85242;10.323107;10;3;9;2;12;4,5;4,5;2
+Musée national de Carthage;36.853322;10.324061;30;4;9;2;12;4,5;4,5;2
+Tombeau punique (Ariche);36.853108;10.323086;5;4;9;2;12;4,5;4,5;2
+Emplacement de la Chapelle Saint Louis;36.852991;10.324847;20;3;9;2;12;4,5;4,5;2
+Emplacement probable de la curie;36.853296;10.323026;5;2;9;2;12;4,5;4,5;2
+Quartier Punique (Quartier Hannibal);36.852461;10.323927;15;4;9;2;12;4,5;4,5;2
+Cathédrale Saint Louis;36.853784;10.3230043;15;4;9;2;12;4,5;4,5;2
+Beit El Hikma;36.8515859;10.3321256;15;5;0;0;0;0;0;0
+Musée Océanographique (Dar El Hout);36.8432576;10.32552;60;5;5;5;5;5;5;5
+Amphithéâtre de Carthage;36.856074;10.3149741;30;5;9;2;12;4,5;4,5;2
+Basilique Damous Karita;36.8615477;10.3311389;30;5;0;0;0;0;0;0
+La Rotonde de Damous El Karita;36.8608347;10.3300412;20;5;0;0;0;0;0;0
+Basilique Maiorum;36.867547;10.333933;10;3;0;0;0;0;0;0
+Basilique Saint Cyprien;36.863996;10.337183;15;5;0;0;0;0;0;0
+Musée Paléochrétien Basilique de Cartagena;36.8482724;10.324467;30;5;9;2;12;4,5;4,5;2
+Citernes de la Malaga;36.859179;10.318889;20;5;0;0;0;0;0;0
+Cirque;36.850913;10.314953;5;4;0;0;0;0;0;0
+Édifice à colonnes (Jockey club de Carthage);36.856557;10.325431;15;3;0;0;0;0;0;0
+Maison de la chasse aux sangliers;36.8560535;10.327904;10;2;0;0;0;0;0;0
+Odéon;36.8586871;10.330449;10;5;9;2;12;4,5;4,5;2
+Mosquée Imam Malek Ibn Anas;36.859308;10.329536;20;5;0;0;0;0;0;0
+Parc de Monument circulaire;36.8576223;10.3269422;20;5;9;2;12;4,5;4,5;2
+Monument circulaire (Martyrium);36.857576;10.327918;10;3;0;0;0;0;0;0
+Basilique chrétienne;36.85793;10.327202;5;2;0;0;0;0;0;0
+Triconque;36.857718;10.327640;5;2;0;0;0;0;0;0
