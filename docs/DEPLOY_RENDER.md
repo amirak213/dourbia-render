@@ -6,13 +6,18 @@ Plan retenu : **backend Docker**, **Postgres 16**, **Redis**, **frontend statiqu
 
 1. Rotation des secrets (Groq, Langfuse, et aussi ADMIN_API_KEY et le mot de passe d'application Gmail d'AgentLocation, exposés dans l'historique GitHub) — ne pas réutiliser d’anciennes valeurs exposées sur GitHub.
 2. `git push` contenant `render.yaml`, `Dockerfile`, `.dockerignore`, `.gitignore`, `scripts/start.sh`, `scripts/render_bootstrap_pg_env.py` et `scripts/smoke_render.ps1`.
-3. Dashboard Render → **New Blueprint** → repo `amirak213/PrincipalAgents`, branche `main`.
+3. Dashboard Render → **New Blueprint** → repo `amirak213/dourbia-render`, branche `main`.
 4. Saisir les variables `sync: false` lors de la création.
 5. Attendre le premier déploiement backend (démarrage ~140–170 s ; health check `/health` jusqu’à 15 min).
 6. Restaurer les données (section ci-dessous) via l’**URL externe** Postgres. Si la connexion externe est refusée, ajouter votre IP dans Networking de la base (dashboard), puis refermer l'accès après la restauration.
 7. Mettre à jour `FRONTEND_ORIGINS` = URL du site statique (ex. `https://dourbia-frontend.onrender.com`) (sans slash final).
 8. Redéployer le backend si CORS bloque le navigateur.
-9. `scripts/smoke_render.ps1 -BaseUrl https://dourbia-backend.onrender.com -Origin https://dourbia-frontend.onrender.com` : la section 9 (AgentLocation) et le test 6 (location de voiture) sont attendus en échec, l'agent n'étant pas déployé.
+9. `scripts/smoke_render.ps1 -BaseUrl https://dourbia-backend.onrender.com -Origin https://dourbia-frontend.onrender.com` — la section 9 (AgentLocation) et le test 6 sont attendus en échec, l’agent n’étant pas déployé.
+
+## Vérification locale
+
+Pour vérifier le mode guide, exécuter `.\scripts\guide_smoke.ps1` (parcours à 2 lieux) et `.\scripts\single_place_smoke.ps1` (parcours à 1 lieu). Les deux scripts acceptent le paramètre facultatif `-BaseUrl`, dont la valeur par défaut est `http://localhost:18100`.
+
 ## Données à restaurer (UTF-8, pas l’ancien `dourbia.dump` pour les circuits)
 
 Base cible : **`dourbia`** sur l’instance `dourbia-db`.
