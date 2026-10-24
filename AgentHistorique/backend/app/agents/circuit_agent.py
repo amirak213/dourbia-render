@@ -131,6 +131,7 @@ class CircuitAgent:
             mutation_rate=self._settings.circuit_ga_mutation_rate,
             crossover_rate=self._settings.circuit_ga_crossover_rate,
             elitism=self._settings.circuit_ga_elitism,
+            min_stops=min(2, context.max_stops),
             max_stops=context.max_stops,
         )
         optimizer = GeneticOptimizer(
